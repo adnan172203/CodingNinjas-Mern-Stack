@@ -4,9 +4,20 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+//db
+const {connectDB} = require('./config/db');
+
+//connection database
+connectDB();
+
+//init middleware
+app.use(express.json({ extended:false }));
+
 app.get('/',(req,res) =>{
     res.send('api running');
 });
+
+
 
 //Route 
 const usersRoute = require('./routes/users');
@@ -15,7 +26,6 @@ const profileRoute = require('./routes/profile');
 const postsRoute = require('./routes/posts');
 
 //Define routes
-
 app.use('/api/users', usersRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/profile', profileRoute);
