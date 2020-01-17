@@ -31,7 +31,7 @@ const PostSchema = new Schema({
 
   comments: [
     {
-      comments: {
+      user: {
         type: Schema.Types.ObjectId,
         ref: 'users'
       },
