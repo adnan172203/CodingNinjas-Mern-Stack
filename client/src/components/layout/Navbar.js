@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/auth';
@@ -6,6 +6,12 @@ import { logout } from '../../actions/auth';
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
+      <li>
+        <i className='fas fa-user'></i>
+        <Link to='/dashboard'>
+          <span className='hide-sm'>Dashboard</span>
+        </Link>
+      </li>
       <li>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt'></i>
@@ -46,9 +52,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 };
 
 const mapStateToProps = state => {
- return{
-  auth: state.auth
- }
+  return {
+    auth: state.auth
+  };
 };
 
 export default connect(mapStateToProps, { logout })(Navbar);
