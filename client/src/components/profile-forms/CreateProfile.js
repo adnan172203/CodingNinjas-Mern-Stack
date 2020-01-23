@@ -1,7 +1,9 @@
 import React, { useState, Fragment } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createProfile } from '../../actions/profile';
 
-const CreateProfile = () => {
+const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
     company: '',
     website: '',
@@ -38,6 +40,11 @@ const CreateProfile = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    createProfile(formData, history);
+  };
+
   return (
     <Fragment>
       <h1 className='large text-primary'>Create Your Profile</h1>
@@ -46,7 +53,7 @@ const CreateProfile = () => {
         profile stand out
       </p>
       <small>* = required field</small>
-      <form className='form'>
+      <form className='form' onSubmit={e => handleSubmit(e)}>
         <div className='form-group'>
           <select name='status' value={status} onChange={e => handleChange(e)}>
             <option value='0'>* Select Professional Status</option>
@@ -213,4 +220,4 @@ const CreateProfile = () => {
   );
 };
 
-export default CreateProfile;
+export default connect(null, { createProfile })(withRouter(CreateProfile));
