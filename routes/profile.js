@@ -7,6 +7,7 @@ const auth = require('../middleware/auth');
 //model
 const Profile = require('../models/Profile');
 const User = require('../models/User');
+const Post = require('../models/Post');
 
 //get router
 router.get('/me', auth, async (req, res) => {
@@ -136,10 +137,13 @@ router.get('/:userId', async (req, res) => {
 //delete profile,user & post
 router.delete('/', auth, async (req, res) => {
   try {
-    //remove profile
+    // Remove user Post
+    Post.deleteMany({ user: req.user.id });
+
+    // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
 
-    //Remove user
+    // Remove user
     await User.findOneAndRemove({ _id: req.user.id });
     res.json({ msg: 'user deleted' });
   } catch (err) {
