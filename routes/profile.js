@@ -116,7 +116,7 @@ router.get('/', async (req, res) => {
 });
 
 //get profile by user id
-router.get('/:userId', async (req, res) => {
+router.get('/user/:userId', async (req, res) => {
   try {
     const profile = await Profile.find({
       user: req.params.userId
