@@ -70,8 +70,8 @@ const Profile = ({
               )}
             </div>
 
-            {profile.githubusername && (
-              <ProfileGithub username={profile.githubusername} />
+            {profile[0].githubusername && (
+              <ProfileGithub username={profile[0].githubusername} />
             )}
           </div>
         </Fragment>
