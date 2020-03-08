@@ -70,8 +70,14 @@ router.get('/:id', auth, async (req, res) => {
 router.delete('/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
-    if (!posts) {
-      res.status(404).json({ msg: 'post not found' });
+
+    // if (!posts) {
+    //   res.status(404).json({ msg: 'post not found' });
+    // }
+
+    // Check for ObjectId format and post
+    if (!req.params.id.match(/^[0-9a-fA-F]{24}$/) || !post) {
+      return res.status(404).json({ msg: 'Post not found' });
     }
 
     //check user
@@ -164,7 +170,7 @@ router.post(
     try {
       const user = await User.findById(req.user.id).select('-password');
       console.log(req.user.id);
-      
+
       const post = await Post.findById(req.params.id);
 
       const newComment = {
@@ -201,7 +207,7 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
     if (!comment) {
       res.status(400).send('comment does not exists');
     }
-console.log(comment.user);
+    console.log(comment.user);
 
     //check user
     if (comment.user.toString() !== req.user.id) {
