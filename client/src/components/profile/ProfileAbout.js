@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react';
 
 const ProfileAbout = ({profile}) => {
+
   const { bio,skills,user:{ name } } = profile[0];
 
   return (

@@ -14,7 +14,7 @@ router.post(
   [
     check('name', 'name is required').notEmpty(),
     check('email', 'email is required').isEmail(),
-    check('password', 'password is required').isLength({ min: 6 })
+    check('password', 'password is required').isLength({ min: 6 }),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -32,7 +32,7 @@ router.post(
       const avatar = gravatar.url(email, {
         s: '200',
         r: 'pg',
-        d: 'mm'
+        d: 'mm',
       });
 
       //create new user
@@ -41,7 +41,7 @@ router.post(
         name,
         email,
         avatar,
-        password
+        password,
       });
 
       //hash the password
@@ -54,8 +54,8 @@ router.post(
       //create payload for jwt
       const payload = {
         user: {
-          id: user._id
-        }
+          id: user._id,
+        },
       };
 
       jwt.sign(payload, 'secretKey', { expiresIn: '4h' }, (err, token) => {

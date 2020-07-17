@@ -40,7 +40,7 @@ const Profile = ({
             <ProfileAbout profile={profile} />
             <div className='profile-exp bg-white p-2'>
               <h2 className='text-primary'>Experience</h2>
-              {profile[0].experience.length > 0 ? (
+              {profile[0] && profile[0].experience.length > 0 ? (
                 <Fragment>
                   {profile[0].experience.map(experience => (
                     <ProfileExperience
@@ -56,7 +56,7 @@ const Profile = ({
 
             <div className='profile-edu bg-white p-2'>
               <h2 className='text-primary'>Education</h2>
-              {profile[0].education.length > 0 ? (
+              {profile[0] && profile[0].education.length > 0 ? (
                 <Fragment>
                   {profile[0].education.map(education => (
                     <ProfileEducation
@@ -70,7 +70,7 @@ const Profile = ({
               )}
             </div>
 
-            {profile[0].githubusername && (
+            {profile[0] && profile[0].githubusername && (
               <ProfileGithub username={profile[0].githubusername} />
             )}
           </div>
