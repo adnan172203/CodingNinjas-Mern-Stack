@@ -17,8 +17,8 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: #18191a;
+  color: #e4e6eb;
 }
 
 a {
@@ -160,16 +160,18 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: #46494c;
   color: #fff;
+  border-radius:5px;
 }
 
 .btn-light,
 .bg-light,
 .badge-light,
 .alert-light {
-  background: var(--light-color);
-  color: #333;
+  background: #242526;
+  color: #e4e6eb;
+  border-radius: 10px;
 }
 
 .btn-dark,
@@ -177,14 +179,14 @@ img {
 .badge-dark,
 .alert-dark {
   background: var(--dark-color);
-  color: #fff;
+  color: #e4e6eb;
 }
 
 .btn-danger,
 .bg-danger,
 .badge-danger,
 .alert-danger {
-  background: var(--danger-color);
+  background: #c72c41;
   color: #fff;
 }
 
@@ -295,7 +297,8 @@ button {
 }
 
 .table th {
-  background: var(--light-color);
+  background: #242526;
+  border-radius: 5px;
 }
 
 /* Navbar */
