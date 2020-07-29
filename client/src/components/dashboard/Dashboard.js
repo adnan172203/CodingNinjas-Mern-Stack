@@ -6,6 +6,7 @@ import DashboardAction from './DashboardAction';
 import Experience from './Experience';
 import Education from './Education';
 import Spinner from '../layout/Spinner';
+import { AiOutlineUser } from "react-icons/ai";
 
 const Dashboard = ({ getCurrentProfile, auth:{user}, profile:{profile,loading},deleteAccount}) => {
  
@@ -18,9 +19,8 @@ const Dashboard = ({ getCurrentProfile, auth:{user}, profile:{profile,loading},d
         Dashboard
       </h1>
       <p className="lead">
-        <i className="fas fa-user">
-          welcome {user && user.name}
-        </i>
+        <AiOutlineUser className='dashoutuser'/>welcome {user && user.name}
+
       </p>
       { profile !== null ? <Fragment>
         <DashboardAction />
