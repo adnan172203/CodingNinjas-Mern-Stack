@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
-  --dark-color: #343a40;
+  --primary-color: #f8c03e;
+  --dark-color: #242526;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -156,13 +156,11 @@ img {
   color: #333;
 }
 
-.btn-primary,
-.bg-primary,
-.badge-primary,
-.alert-primary {
-  background: #46494c;
+.btn-primary {
+  background: #f8c03e;
   color: #fff;
-  border-radius:5px;
+  border-radius: 5px;
+  width: 45%;
 }
 
 .btn-light,
@@ -211,7 +209,6 @@ img {
   opacity: 0.8;
 }
 
-.bg-light,
 .badge-light {
   border: #ccc solid 1px;
 }
@@ -228,7 +225,6 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -251,13 +247,14 @@ img {
 .form input[type='email'],
 .form input[type='password'],
 .form input[type='date'],
-.form select,
-.form textarea {
+.form select {
   display: block;
   width: 100%;
-  padding: 0.4rem;
-  font-size: 1.2rem;
-  border: 1px solid #ccc;
+  padding: 1.1rem;
+  font-size: 1rem;
+  border: none;
+  background: #303030;
+  border-radius: 3px;
 }
 
 .form input[type='submit'],
@@ -467,6 +464,9 @@ button {
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
+  background: #242526;
+  border: none;
+  border-radius: 7px;
 }
 
 .post > div:first-child {
@@ -479,10 +479,14 @@ button {
 
 .post .comment-count {
   background: var(--light-color);
-  color: var(--primary-color);
+  color: #565249;
   padding: 0.1rem 0.2rem;
-  border-radius: 5px;
+  border-radius: 50%;
   font-size: 0.8rem;
+  position: absolute;
+  left: 51%;
+  top: -24%;
+  padding: 2px 8px;
 }
 
 .post .post-date {
@@ -493,6 +497,88 @@ button {
 /* extra style */
 .dashoutuser {
   vertical-align: middle;
+}
+
+.layout-headline {
+  color: var(--primary-color);
+}
+
+.middle {
+  text-align: center;
+}
+
+form.form {
+  display: inline-block;
+}
+.front-btn {
+  background: #f8c03e;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-dev {
+  border: 1px solid #f8c03e;
+  padding: 0.8rem 1.2rem;
+  border-radius: 7px;
+}
+
+form.post-form {
+  background: #242526;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  padding-top: 2rem;
+
+}
+
+.post-form textarea {
+  display: block;
+  font-size: 1rem;
+  border: none;
+  background: #4e4f50;
+  border-radius: 10px;
+  padding: 1rem;
+  resize: none;
+}
+.post-form textarea::placeholder {
+  color: #fff;
+}
+
+.post-btn {
+  background: #F8C03E;
+  padding: 0.7rem 5rem;
+  border: none;
+  outline: 0;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.post-text{
+  color:#929292;
+}
+
+.btn-like, .btn-unlike,.post-discussion-btn{
+  background: transparent;
+  font-size: 24px;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  margin-right: 0.5rem;
+  outline: none;
+  cursor:pointer;
+}
+
+.btn-like {
+  color: #F23E5C;
+}
+
+.btn-unlike {
+  color: #F8C03E;
+}
+
+.post-discussion-btn {
+  color: #2DCD7A;
+  position:relative;
 }
 
 /* Mobile Styles */

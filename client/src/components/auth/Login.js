@@ -28,11 +28,8 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <section className='container'>
+      <div className='middle'>
         <h1 className='large text-primary'>Sign In</h1>
-        <p className='lead'>
-          <i className='fas fa-user'></i> Sign Into Your Account
-        </p>
         <form className='form' onSubmit={e => handleSubmit(e)}>
           <div className='form-group'>
             <input
@@ -59,7 +56,7 @@ const Login = ({ login, isAuthenticated }) => {
         <p className='my-1'>
           Already have an account? <Link to='/register'>Sign Up</Link>
         </p>
-      </section>
+      </div>
     </Fragment>
   );
 };

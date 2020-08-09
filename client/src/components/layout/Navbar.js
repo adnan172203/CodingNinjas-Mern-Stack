@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/auth';
+import Logo from '../../img/Logo.png';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
@@ -46,7 +47,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <nav className='navbar bg-dark'>
         <h1>
           <a href='#!'>
-            <i className='fas fa-code'></i> DevConnector
+           <img src={Logo} alt=""/>
           </a>
         </h1>
         {!loading && (
