@@ -4,6 +4,7 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { addLike, removeLike, deletePost } from '../../actions/post';
 import { FiThumbsUp, FiThumbsDown, FiMessageSquare } from 'react-icons/fi';
+import { TiDeleteOutline } from 'react-icons/ti';
 
 const PostItem = ({
   auth,
@@ -56,9 +57,9 @@ const PostItem = ({
               <button
                 onClick={() => deletePost(_id)}
                 type='button'
-                className='btn btn-danger'
+                className='btn-delete'
               >
-                <i className='fas fa-times'></i>
+                <TiDeleteOutline/>
               </button>
             )}
           </Fragment>

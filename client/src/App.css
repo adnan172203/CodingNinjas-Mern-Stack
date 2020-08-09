@@ -467,6 +467,7 @@ button {
   background: #242526;
   border: none;
   border-radius: 7px;
+  position:relative;
 }
 
 .post > div:first-child {
@@ -579,6 +580,18 @@ form.post-form {
 .post-discussion-btn {
   color: #2DCD7A;
   position:relative;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ff4c4c;
+  font-size: 33px;
+  position: absolute;
+  top: -3px;
+  right: 4px;
+  cursor:pointer;
 }
 
 /* Mobile Styles */
