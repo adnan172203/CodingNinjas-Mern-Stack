@@ -5,7 +5,7 @@ import { addComment } from '../../actions/post';
 const CommentForm = ({postId,addComment }) => {
     const [text,setText] = useState('');
   return (
-    <div className='post-form'>
+    <div className='comment-form'>
       <div className='bg-primary p'>
         <h3>Leave a comment...</h3>
       </div>
@@ -19,9 +19,9 @@ const CommentForm = ({postId,addComment }) => {
       >
         <textarea
           name='text'
-          cols='30'
-          rows='5'
-          placeholder='Create a post'
+          cols='70'
+          rows='2'
+          placeholder='write your comment'
           value={text}
           onChange={e => setText(e.target.value)}
           required

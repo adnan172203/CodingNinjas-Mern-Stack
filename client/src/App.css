@@ -219,7 +219,7 @@ img {
 
 .line {
   height: 1px;
-  background: #ccc;
+  background: #525252;
   margin: 1.5rem 0;
 }
 
@@ -422,7 +422,7 @@ button {
 .profile-edu > div {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: #ccc 1px dotted;
+  border-bottom: #6f6f6f 1px dotted;
 }
 
 .profile-exp > div:last-child,
@@ -485,13 +485,13 @@ button {
   border-radius: 50%;
   font-size: 0.8rem;
   position: absolute;
-  left: 51%;
-  top: -24%;
-  padding: 2px 8px;
+  left: 0;
+  top: -6%;
+  padding: 1px 7px;
 }
 
 .post .post-date {
-  color: #aaa;
+  color: #9F9F9F;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
@@ -538,11 +538,17 @@ form.post-form {
   font-size: 1rem;
   border: none;
   background: #4e4f50;
+  color: #fff;
   border-radius: 10px;
   padding: 1rem;
   resize: none;
+  outline: none;
 }
 .post-form textarea::placeholder {
+  color: rgb(139, 139, 139);
+}
+
+.post-form textarea:focus {
   color: #fff;
 }
 
@@ -561,7 +567,7 @@ form.post-form {
 
 .btn-like, .btn-unlike,.post-discussion-btn{
   background: transparent;
-  font-size: 24px;
+  font-size: 18px;
   border: none;
   padding: 0.4rem 1.2rem;
   margin-right: 0.5rem;
@@ -575,11 +581,19 @@ form.post-form {
 
 .btn-unlike {
   color: #F8C03E;
+  display: flex;
+  align-items: center;
 }
 
 .post-discussion-btn {
   color: #2DCD7A;
   position:relative;
+  display: flex;
+  align-items: center;
+}
+
+.btn-unlike span, .post-discussion-btn span {
+  margin-left: 0.4rem;
 }
 
 .btn-delete {
@@ -587,11 +601,67 @@ form.post-form {
   border: none;
   outline: none;
   color: #ff4c4c;
-  font-size: 33px;
+  font-size: 23px;
   position: absolute;
   top: -3px;
   right: 4px;
   cursor:pointer;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #525252;
+  padding-top: 1rem;
+}
+
+.profile-exp, .profile-edu, .repo {
+  background: #242526;
+  border-radius: 10px;
+  border: none;
+}
+
+.repo p {
+  color: #c7c7c7;
+}
+
+.comment-form textarea{
+  display: block;
+  font-size: 1.5rem;
+  border: none;
+  background: #4e4f50;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+}
+
+.comment-form {
+  text-align: center;
+}
+
+.comment-color {
+  color: #bdbbbb;
+}
+
+button.comment-delete {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ff4c4c;
+  position: absolute;
+  right: 2px;
+  top: 0;
+  font-size: 23px;
+  cursor:pointer;
+}
+
+.back-btn {
+  color: #fff;
+  background: #3a3838;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 /* Mobile Styles */

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import {deleteComment} from '../../actions/post';
+import { RiDeleteBackLine } from 'react-icons/ri';
 
 const CommentItem = ({
   comment: { _id, text, name, avatar, user, date },
@@ -20,13 +21,13 @@ const CommentItem = ({
           </Link>
         </div>
         <div>
-          <p className='my-1'>{text}</p>
+          <p className='comment-color my-1'>{text}</p>
           <p className='post-date'>
             Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
           </p>
           {!auth.loading && user === auth.user._id &&(
-              <button type="button" className="btn btn-danger" onClick={e => deleteComment(postId, _id)}>
-                  Delete
+              <button type="button" className="comment-delete" onClick={e => deleteComment(postId, _id)}>
+                  <RiDeleteBackLine/>
               </button>
           )}
         </div>

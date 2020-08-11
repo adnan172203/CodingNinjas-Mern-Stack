@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 import { connect } from 'react-redux';
 import { addLike, removeLike, deletePost } from '../../actions/post';
 import { FiThumbsUp, FiThumbsDown, FiMessageSquare } from 'react-icons/fi';
-import { TiDeleteOutline } from 'react-icons/ti';
+import { RiDeleteBackLine } from 'react-icons/ri';
 
 const PostItem = ({
   auth,
@@ -36,7 +36,7 @@ const PostItem = ({
                 type='button'
                 className='btn-like'
               >
-                <FiThumbsUp />
+                <FiThumbsUp /> <span>Like</span>
                 <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
               </button>
               <button
@@ -44,10 +44,10 @@ const PostItem = ({
                 type='button'
                 className='btn-unlike'
               >
-                <FiThumbsDown />
+                <FiThumbsDown /> <span>Unlike</span>
               </button>
               <Link to={`/posts/${_id}`} className='post-discussion-btn'>
-                <FiMessageSquare />{' '}
+                <FiMessageSquare />{' '} <span>Comment</span>
                 {comments.length > 0 && (
                   <span className='comment-count'>{comments.length}</span>
                 )}
@@ -59,7 +59,7 @@ const PostItem = ({
                 type='button'
                 className='btn-delete'
               >
-                <TiDeleteOutline/>
+                <RiDeleteBackLine/>
               </button>
             )}
           </Fragment>
