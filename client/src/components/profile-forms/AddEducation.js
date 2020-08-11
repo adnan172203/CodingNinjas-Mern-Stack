@@ -110,7 +110,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className='form-group'>
           <textarea
             name='description'
-            cols='30'
+            cols='60'
             rows='5'
             placeholder='Program Description'
             value={description}

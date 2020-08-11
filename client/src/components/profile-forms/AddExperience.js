@@ -102,7 +102,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className='form-group'>
           <textarea
             name='description'
-            cols='30'
+            cols='70'
             rows='5'
             placeholder='Job Description'
             value={description}

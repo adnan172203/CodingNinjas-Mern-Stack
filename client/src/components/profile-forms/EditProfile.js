@@ -156,6 +156,8 @@ const EditProfile = ({
         </div>
         <div className='form-group'>
           <textarea
+            cols='80'
+            rows='3'
             placeholder='A short bio of yourself'
             name='bio'
             value={bio}

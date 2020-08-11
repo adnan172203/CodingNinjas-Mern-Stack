@@ -255,7 +255,10 @@ img {
   border: none;
   background: #303030;
   border-radius: 3px;
+  color: #cecece;
 }
+
+
 
 .form input[type='submit'],
 button {
@@ -662,6 +665,15 @@ button.comment-delete {
   background: #3a3838;
   padding: 1rem;
   border-radius: 5px;
+}
+
+.form-group textarea {
+  background: #303030;
+  color: #cecece;
+  padding: 1rem;
+  resize: none;
+  border-radius: 5px;
+  border: none;
 }
 
 /* Mobile Styles */
