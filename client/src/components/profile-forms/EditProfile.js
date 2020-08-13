@@ -174,7 +174,7 @@ const EditProfile = ({
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <small>*optional</small>
         </div>
 
         {disPlaySocialInputs && (

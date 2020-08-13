@@ -17,7 +17,7 @@ const ProfileAbout = ({profile}) => {
       <div className='skills'>
         {skills.map((skill, index) => (
           <div key={index} className='p-1'>
-            <i class="far fa-dot-circle"></i> {skill}
+            <i className="far fa-dot-circle"></i> {skill}
           </div>
         ))}
       </div>

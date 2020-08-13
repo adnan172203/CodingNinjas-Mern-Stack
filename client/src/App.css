@@ -356,6 +356,7 @@ button {
 
 .profiles{
   width:70%;
+  margin: 0 auto;
 }
 
 .profile {
@@ -635,6 +636,7 @@ form.post-form {
 
 .comment-form textarea{
   display: block;
+  width:100%;
   font-size: 1.5rem;
   border: none;
   background: #4e4f50;
@@ -679,6 +681,20 @@ button.comment-delete {
   resize: none;
   border-radius: 5px;
   border: none;
+  width:100%;
+}
+
+h1.dev-heading {
+  font-size: 3vw;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+.dev-subheading {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* Mobile Styles */

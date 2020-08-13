@@ -34,7 +34,7 @@ const Dashboard = ({ getCurrentProfile, auth:{user}, profile:{profile,loading},d
         </div>
       </Fragment>:<Fragment>
         <p>you have not yet setup a profile, please add some profile</p>
-        <Link to='/create-profile' className='btn btn-primary my-1'> create profile</Link>
+        <Link to='/create-profile' className='create-btn my-1'> create profile</Link>
       </Fragment> }
      </Fragment> ;
 };

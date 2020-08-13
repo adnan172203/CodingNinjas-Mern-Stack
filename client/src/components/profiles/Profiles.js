@@ -15,9 +15,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'>Developers</h1>
-          <p className='lead'>
-            <i className='fab fa-connectdevelop' /> Browse and connect with
+          <h1 className='dev-heading'>Developers</h1>
+          <p className='dev-subheading'>
+          <i className="fab fa-wpexplorer"></i> Browse and connect with
             developers
           </p>
           <div className='profiles'>
